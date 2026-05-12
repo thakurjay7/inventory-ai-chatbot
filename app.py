@@ -13,7 +13,7 @@ st.set_page_config(
 # HOME PAGE
 # -----------------------------------
 
-st.title("🏠 Welcome to StockPilot AI")
+st.title("Welcome to StockPilot AI")
 
 st.subheader("AI-Powered Retail Inventory Intelligence Platform")
 
