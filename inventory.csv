@@ -1,0 +1,11 @@
+Product,Stock,Daily_Sales,Lead_Time,Supplier
+Coca Cola,120,25,3,Supplier A
+Chips,40,18,5,Supplier B
+Milk,15,10,2,Supplier C
+Biscuits,80,15,4,Supplier D
+Juice,25,12,6,Supplier E
+Rice,200,30,7,Supplier F
+Soap,60,9,3,Supplier G
+Shampoo,35,7,5,Supplier H
+Bread,18,11,2,Supplier I
+Eggs,50,20,1,Supplier J
