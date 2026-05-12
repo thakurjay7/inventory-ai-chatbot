@@ -1,11 +1,12 @@
 import streamlit as st
 import pandas as pd
-from google import genai
+import google.generativeai as genai
 
-# Configure Client
-client = genai.Client(
-    api_key="AIzaSyAB0-MSJdahZ4cJCsuRJ3lYfCw_pS6XV3I"
-)
+# Configure Gemini API
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
+
+# Load Gemini Model
+model = genai.GenerativeModel("gemini-1.5-flash")
 
 # Page Title
 st.title("🤖 AI Inventory Assistant")
@@ -34,14 +35,11 @@ if user_question:
     User Question:
     {user_question}
 
-    Give a short and clear answer.
+    Give a short and clear business answer.
     """
 
     try:
-        response = client.models.generate_content(
-            model="gemini-2.0-flash",
-            contents=prompt
-        )
+        response = model.generate_content(prompt)
 
         st.success(response.text)
 
